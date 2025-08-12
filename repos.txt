@@ -1,0 +1,4 @@
+repo,stack
+https://github.com/mooncowboy/northwind-viewer,node
+https://github.com/mooncowboy/MvcMovieNet6,.net mvc
+https://github.com/mooncowboy/LegacyWebForms,.net framework
