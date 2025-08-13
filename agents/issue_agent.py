@@ -4,9 +4,7 @@ import asyncio
 from azure.identity.aio import DefaultAzureCredential
 from semantic_kernel import Kernel
 from semantic_kernel.agents import AzureAIAgent, AzureAIAgentSettings, AzureAIAgentThread
-
-
-
+from plugins.github_plugin import GithubPlugin
 
 async def main():
     load_dotenv()
@@ -33,7 +31,7 @@ async def main():
             client=client,
             definition=definition,
             kernel=kernel,
-            plugins=[],
+            plugins=[GithubPlugin()],
         )
         # 3) Talk to the hosted agent; it can now call your SK tools
         thread = AzureAIAgentThread(client=client)  # keeps conversation state server-side
