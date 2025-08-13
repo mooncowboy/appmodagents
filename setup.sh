@@ -1,0 +1,1 @@
+python -m setup.create_agents

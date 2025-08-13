@@ -1,6 +1,8 @@
 python-dotenv 
 azure-identity
+semantic-kernel 
 azure-ai-agents
-
+opentelemetry-sdk 
+opentelemetry-exporter-otlp
 # For github
 requests
