@@ -5,6 +5,7 @@ from azure.identity.aio import DefaultAzureCredential
 from semantic_kernel import Kernel
 from semantic_kernel.agents import AzureAIAgent, AzureAIAgentSettings, AzureAIAgentThread
 from plugins.github_plugin import GithubPlugin
+from utils import telemetry
 
 async def main():
     load_dotenv()

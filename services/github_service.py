@@ -54,6 +54,11 @@ def create_issue(repo_url: str, title: str, body: str) -> str:
     if response.status_code != 200:
             raise RuntimeError(f"GitHub API error: {response.status_code} {response.text}")
 
+    # If the env var is set, don't actually assign copilot
+    skip_gh_coding_agent_assign = os.getenv("SKIP_GH_CODING_AGENT_ASSIGN", False)
+    if skip_gh_coding_agent_assign:
+        print("Skipping GitHub coding agent assignment, see SKIP_GH_CODING_AGENT_ASSIGN env var")
+        return "0"
 
     # assign to Coding Agent
     query = """

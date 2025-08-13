@@ -1,8 +1,12 @@
 python-dotenv 
 azure-identity
-semantic-kernel 
+# Forcing 1.35.2 for now to avoid compatibility issues with azure-ai-agents beta version
+semantic-kernel==1.35.2
 azure-ai-agents
 opentelemetry-sdk 
 opentelemetry-exporter-otlp
+azure-monitor-opentelemetry-exporter
+azure-monitor-opentelemetry
+azure-core-tracing-opentelemetry
 # For github
 requests
